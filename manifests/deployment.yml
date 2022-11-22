@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: prkhgwanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prkhgwanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: prkhgwanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: prkhgwanpipelinesjavascriptdocker 
+          image: testpark.azurecr.io/prkhgwanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
